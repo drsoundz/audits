@@ -28,9 +28,8 @@ contract CrossFunctionAttack {
         if(!_attacking) {
             return;
         }
-        
+        // _attacking = false;
         vault.transfer(accomplice, msg.value);
-        _attacking = false;
     }
 
     function withdrawProfit() external {
